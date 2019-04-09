@@ -259,7 +259,7 @@ class pil_build_ext(build_ext):
     ] + [('add-imaging-libs=', None, 'Add libs to _imaging build')]
 
     def initialize_options(self):
-        self.disable_platform_guessing = None
+        self.disable_platform_guessing = True
         self.add_imaging_libs = ""
         build_ext.initialize_options(self)
         for x in self.feature:
